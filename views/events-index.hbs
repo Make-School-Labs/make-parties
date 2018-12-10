@@ -1,0 +1,9 @@
+<div class="row mt-4">
+  <div class="col-lg-6 offset-lg-3">
+    <div class="list-group mt-4">
+      {{#each events}}
+        <a href="/events/{{this.id}}" class="list-group-item list-group-item-action">{{this.title}}</a>
+      {{/each}}
+    </div>
+  </div>
+</div>

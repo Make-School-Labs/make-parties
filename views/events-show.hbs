@@ -1,0 +1,28 @@
+<div class="row mt-4">
+  <div class="col-lg-6 offset-lg-3">
+    <h3>{{event.title}}</h3>
+    <div class="lead">{{event.desc}}</div>
+
+    <div class="text-right">
+      <a href="/events/{{event.id}}/edit">Edit</a>
+    </div>
+
+    <p class='mt-4'>
+      <b>Comments</b>
+    </p>
+    <form action="/events/{{event.id}}/comments" method="post">
+      <div class="form-group">
+        <textarea name="body" class="form-control" placeholder="140 characters max"></textarea>
+      </div>
+      <div class="text-right">
+        <button type="submit" class="btn btn-primary" name="button">Save</button>
+      </div>
+    </form>
+
+    <div class="list-group mt-4">
+      {{#each comments}}
+        <div class="list-group-item">{{this.body}}</div>
+      {{/each}}
+    </div>
+  </div>
+</div>

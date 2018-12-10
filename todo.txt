@@ -1,0 +1,26 @@
+Make Parties
+
+CRUD Events
+CD RSVPs
+CRUD Comments
+
+sequelize init
+   - update .sequelizerc to change paths to /db
+
+DONE tweet edit/update
+DONE tweet delete
+
+make tweets.js controller
+
+associate posts to topics
+
+initialize project
+add templating engine
+Layout template
+Bootstrap
+Outside in development
+make a route
+CRUD a resource
+Associate a second resource one-to-many
+Use nested routes
+Partial templates
