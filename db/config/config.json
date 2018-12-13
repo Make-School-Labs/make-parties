@@ -4,16 +4,19 @@
    "password": null,
    "database": "make-parties",
    "host": "127.0.0.1",
-   "dialect": "postgres"
+   "dialect": "postgres",
+   "operatorsAliases": "Sequelize.Op"
  },
  "test": {
    "username": null,
    "password": null,
    "database": "make-parties-test",
    "host": "127.0.0.1",
-   "dialect": "postgres"
+   "dialect": "postgres",
+   "operatorsAliases": "Sequelize.Op"
  },
  "production": {
-   "use_env_variable": "PROD_DATABASE_URL"
+   "use_env_variable": "PROD_DATABASE_URL",
+   "operatorsAliases": "Sequelize.Op"
  }
 }

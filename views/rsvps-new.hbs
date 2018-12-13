@@ -3,21 +3,20 @@
     <div class="card">
       <div class="card-body">
         <div class="card-title">
-          <h3>New Event</h3>
+          <h3>New RSVP</h3>
+          <div class="lead">
+            Event: {{event.title}}
+          </div>
         </div>
         <div class="card-text">
-          <form action="/events" method="post">
+          <form action="/events/{{event.id}}/rsvps" method="post">
             <div class="form-group">
-              <label for="title">Title</label>
-              <input name="title" class="form-control" placeholder="Pickup Basketball" />
+              <label for="title">Name</label>
+              <input name="name" class="form-control" placeholder="Jane Doe" />
             </div>
             <div class="form-group">
-              <label for="imgUrl">Image Url</label>
-              <input name="imgUrl" class="form-control" placeholder="" />
-            </div>
-            <div class="form-group">
-              <label for="desc">Description</label>
-              <textarea name="desc" class="form-control" placeholder=""></textarea>
+              <label for="title">Email</label>
+              <input name="email" class="form-control" placeholder="Jane.Doe@gmail.com" />
             </div>
             <div class="text-right">
               <a href="/" class='text-muted mr-2'>Cancel</a>

@@ -2,7 +2,17 @@
   <div class="col-lg-6 offset-lg-3">
     <div class="list-group mt-4">
       {{#each events}}
-        <a href="/events/{{this.id}}" class="list-group-item list-group-item-action">{{this.title}}</a>
+        <div class="card mt-3">
+          <img class="card-img-top" src="{{this.imgUrl}}" alt="Card image cap">
+          <div class="card-body">
+            <h5 class="card-title">{{this.title}}</h5>
+            <p class="card-text">{{this.desc}}</p>
+            <div class="text-right">
+              <a href="/events/{{this.id}}/rsvps/new" class="btn btn-info">Rsvp</a>
+              <a href="/events/{{this.id}}" class="btn btn-primary">View</a>
+            </div>
+          </div>
+        </div>
       {{/each}}
     </div>
   </div>
