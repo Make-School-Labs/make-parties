@@ -7,24 +7,12 @@
         </div>
         <div class="card-text">
           <form action="/events" method="post">
-            <div class="form-group">
-              <label for="title">Title</label>
-              <input name="title" class="form-control" placeholder="Pickup Basketball" />
-            </div>
-            <div class="form-group">
-              <label for="imgUrl">Image Url</label>
-              <input name="imgUrl" class="form-control" placeholder="" />
-            </div>
-            <div class="form-group">
-              <label for="desc">Description</label>
-              <textarea name="desc" class="form-control" placeholder=""></textarea>
-            </div>
+            {{> events-form }}
             <div class="text-right">
               <a href="/" class='text-muted mr-2'>Cancel</a>
               <button type="submit" class="btn btn-primary" name="button">Save</button>
             </div>
           </form>
-          <form action="/events"
         </div>
       </div>
     </div>

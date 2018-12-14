@@ -54,11 +54,13 @@ module.exports = (app, models) => {
 
   // EVENTS#UPDATE
   app.put('/events/:id', (req, res) => {
-    models.Event.update(req.body, {where: { id: req.params.id } }).then((comment) => {
-      res.redirect(`/events/${req.params.id}`);
-    }).catch((err) => {
-      console.log(err);
-    })
+    models.Event.findById(req.params.id).then(event => {
+      event.update(req.body).then(event => {
+        res.redirect(`/events/${req.params.id}`);
+      }).catch((err) => {
+        console.log(err);
+      });
+    });
   });
 
   // EVENTS#DESTROY
